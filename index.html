@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="public/css/style.css">
+    <link rel="stylesheet" href="public/css/menu-bar.css">
+    <link rel="stylesheet" href="public/css/home.css">
+    	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="menu-bar">aa</div>
+    <div class="canva">
+        <canvas id="myChart"></canvas>
+    </div>
+    <form action="" class="forme">
+        <select name="select" id="select">
+            <option value="valor1">Valor 1</option>
+            <option value="valor2" selected>Valor 2</option>
+            <option value="valor3">Valor 3</option>
+        </select>
+        <input type="button" value="Enviar" id="enviar">
+    </form>
+
+	<script>
+        var select = document.getElementById("select")
+        console.log(select.value)
+		var ctx = document.getElementById('myChart').getContext('2d');
+        var enviar = document.getElementById('enviar')
+        enviar.addEventListener('click', ()=>{
+            grafico1()
+        })
+        function grafico1(){
+            let myChart = new Chart(ctx, {
+		    type: 'line',
+		    data: {
+		        labels: [select.value, 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+		        datasets: [{
+		            label: 'Vendas Mensais',
+		            data: [12, 19, 3, 5, 2, 3],
+		            backgroundColor: [
+		                'rgba(255, 99, 132, 0.2)',
+		            ],
+		            borderColor: [
+                        
+		                'rgba(255, 99, 132, 1)',
+		            ],
+		            borderWidth: 1
+		        }]
+		    },
+		    
+		});
+        }
+		grafico1()
+
+
+
+        
+
+	</script>
+
+
+    
+</body>
+</html>
