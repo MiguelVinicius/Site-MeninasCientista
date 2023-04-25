@@ -1,2 +1,2 @@
 # Site-MeninasCientista
-Site das meninasatualização
+Site das Meninas Cientistas
