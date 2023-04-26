@@ -1,0 +1,43 @@
+.main-container .graphics-content .graphics{
+    background-color: red;
+    width: 65vw;
+    height: 80vh;
+}
+.main-container .graphics-content{
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+.main-container .graphics-content .admin-graphics{
+    width: 25vw;
+    height: 80vh;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(71, 71, 71, 0.144);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+}
+.main-container .graphics-content .admin-graphics input{
+    width: 70%;
+    margin-top: 0.5rem;
+    padding: 10px;
+    transition:  1s;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+.main-container .graphics-content .admin-graphics input:focus:not(.enviar){
+    outline: 0;
+    border-bottom: 2px solid rgb(20, 158, 103);
+}
+.main-container .graphics-content .admin-graphics > .number {
+    margin-bottom: 1rem;
+}
+.main-container .graphics-content .admin-graphics > .enviar {
+    background-color: rgb(20, 158, 103);
+    color: white;
+    font-family: 'Montserrat';
+    width: 16rem;
+}
