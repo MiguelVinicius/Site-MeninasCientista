@@ -1,5 +1,5 @@
 .main-container .graphics-content .graphics{
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     width: 65vw;
     height: 80vh;
 }
@@ -40,4 +40,23 @@
     color: white;
     font-family: 'Montserrat';
     width: 16rem;
+}
+
+.graphics{
+    display: flex;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+
+
+}
+.ind-graphic:nth-of-type(1){
+width: 20vw;
+
+}
+.ind-graphic{
+    width: 30vw;
+
 }

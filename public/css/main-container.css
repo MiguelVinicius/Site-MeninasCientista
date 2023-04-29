@@ -7,7 +7,7 @@
  
 }
 .main-container .news-container{
-    background-color: white;
+    background-color: rgb(255, 255, 255);
     width: 30vw;
     min-width: 20rem;
     min-height: 40vh;
@@ -26,7 +26,7 @@
     border-radius: 10px 0px 10px 0px;
     text-align: right;
     font-family: 'Montserrat';
-    color: white;
+    color: rgb(255, 255, 255);
     font-size: 1.3rem;
     padding-right: 1rem;
 
@@ -67,12 +67,14 @@
     list-style: none;
     border-bottom: solid 0.1px rgba(87, 87, 87, 0.144);
     padding: 0.6rem 2rem;
-    font-family: arial;
+    font-family: 'arial';
+    font-weight: 600;
+    color: rgb(65, 65, 65);
 
 }
 
 .body-container{
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffff;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.178);
     min-width: 50vw;
     width: 60vw;
