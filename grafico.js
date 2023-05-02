@@ -5,23 +5,57 @@ const ctx = canvas.getContext('2d');
 const data = {
   labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
   datasets: [{
-    label: 'Vendas',
+    label: '',
     data: [12, 19, 3, 5, 2, 3],
     backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED"],
-    tension: 0.1
+    tension: 0.1,
+    borderColor: 'green',
+    pointStyle: null
   }]
 };
 
 // Crie o gráfico de linha
-const myChart = new Chart(ctx, {
-  type: 'doughnut',
-  data: data,
-  color: "red",
+var chart = new Chart(ctx, {
+  type: 'line',
+  data: {
+      labels: ['Janeiro', 'Fevereiro', 'Março', 'Abril', 'Maio', 'Junho'],
+      datasets: [{
+          label: '',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: 'transparent',
+
+          borderWidth: 2,
+          pointBackgroundColor: 'blue',
+          pointRadius: 3,
+          pointHoverRadius: 5,
+          pointStyle: null
+      },
+      {
+        label: '',
+        data: [20, 0, 13, 15, 20,9],
+        backgroundColor: 'transparent',
+        borderWidth: 2,
+        pointBackgroundColor: 'red',
+        pointRadius: 3,
+        pointHoverRadius: 5,
+        pointStyle: null
+    }]
+      
+  },
   options: {
     scales: {
-      
+        yAxes: [{
+            ticks: {
+                beginAtZero: true
+            }
+        }]
+    },
+    legend: {
+        labels: {
+            display: null
+        }
     }
-  }
+}
 });
 
 const canvas2 = document.querySelector('#graphic2');
@@ -32,15 +66,16 @@ const data2 = {
     datasets: [{
       label: 'Vendas',
       data: [12, 19, 3, 5, 2, 3],
-      borderColor: 'rgb(255, 99, 132)',
+      backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#E7E9ED"],
       tension: 0.1
     }]
   };
   
   // Crie o gráfico de linha
   const myChart2 = new Chart(ctx2, {
+
     type: 'line',
-    data: data,
+    data: data2,
     options: {
       scales: {
         y: {
@@ -64,7 +99,7 @@ const data3 = {
   // Crie o gráfico de linha
   const myChart3 = new Chart(ctx3, {
     type: 'line',
-    data: data,
+    data: data3,
     options: {
       scales: {
         y: {
@@ -87,8 +122,8 @@ const data4 = {
   
   // Crie o gráfico de linha
   const myChart4 = new Chart(ctx4, {
-    type: 'line',
-    data: data,
+    type: 'doughnut',
+    data: data4,
     options: {
       scales: {
         y: {
